@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import AppRoutes from './routes/AppRoutes'
+import { store } from './store/store'
+import { Provider } from 'react-redux'
+
 const App = () => {
+
   return (
     <>
-      <AppRoutes/>
+      <Provider store={store}>
+        <AppRoutes/>
+      </Provider>
     </>
   )
 }
